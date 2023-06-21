@@ -120,7 +120,7 @@ export default function Home() {
           wilaya: province,
           commune: address,
           product: `ensemble-femme`,
-          size: "",
+          size,
           color: productColor,
           agent_id: agentId,
           offer: `${offer}`,
@@ -343,7 +343,7 @@ export default function Home() {
                 <form action="#" method="post">
                   <div className="p-4 border border-rose-600 rounded-lg mt-6">
                     <h3 className="text-lg mt-4 text-center text-white">
-                      قومي بإختيار اللون{" "}
+                      قومي بإختيار اللون و المقاس{" "}
                     </h3>
                     <div>
                       <label className="label w-full text-right block mt-3">
@@ -434,6 +434,57 @@ export default function Home() {
                             alt=""
                             className="rounded-lg"
                           />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="label w-full text-right block mt-3">
+                        <span className="label-text  text-white">المقاس</span>
+                      </label>
+                      <div className="grid grid-cols-6 gap-2 mt-2">
+                        <div
+                          onClick={() => setSize("s")}
+                          className={`flex p-1 border-2 text-white cursor-pointer  hover:border-rose-500  text-center justify-center rounded-lg ${
+                            size === "s" ? "border-rose-500" : "border-gray-700"
+                          }`}
+                        >
+                          S
+                        </div>
+                        <div
+                          onClick={() => setSize("m")}
+                          className={`flex p-1 border-2 text-white cursor-pointer  hover:border-rose-500  text-center justify-center rounded-lg ${
+                            size === "m" ? "border-rose-500" : "border-gray-700"
+                          }`}
+                        >
+                          M
+                        </div>
+                        <div
+                          onClick={() => setSize("l")}
+                          className={`flex p-1 border-2 text-white cursor-pointer  hover:border-rose-500  text-center justify-center rounded-lg ${
+                            size === "l" ? "border-rose-500" : "border-gray-700"
+                          }`}
+                        >
+                          L
+                        </div>
+                        <div
+                          onClick={() => setSize("xl")}
+                          className={`flex p-1 border-2 text-white cursor-pointer  hover:border-rose-500  text-center justify-center rounded-lg ${
+                            size === "xl"
+                              ? "border-rose-500"
+                              : "border-gray-700"
+                          }`}
+                        >
+                          XL
+                        </div>
+                        <div
+                          onClick={() => setSize("xxl")}
+                          className={`flex p-1 border-2 text-white cursor-pointer  hover:border-rose-500  text-center justify-center rounded-lg ${
+                            size === "xxl"
+                              ? "border-rose-500"
+                              : "border-gray-700"
+                          }`}
+                        >
+                          XXL
                         </div>
                       </div>
                     </div>
